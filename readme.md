@@ -1,3 +1,5 @@
+## Overview
+
 What exactly does this repository contain?
 
 
@@ -10,12 +12,25 @@ When you click on 'Inform Me Randomly!', you will be provided with a news articl
 
 There will be a short excerpt along with the title, author, date, source and link to the full article.
 
-I'm expecting 2 main views. One view is 'New', where you get to pick the category and click on the button to randomly select you an article. The second will be 'Show', where you get to view the details of the randomly selected article.
+## UI Draft
 
-Techie Tech Requirements:
+I'm expecting 2 main views.
 
-1. Choosing a category.
-2. Randomly pulling a news article from that category.
+-'New'
+ you get to pick the category and click on the button to randomly select you an article
+-'Show'
+ you get to view the details of the randomly selected article
 
+# Techie Tech Requirements:
 
-I'm not sure ^^^^ if that's right but we will start there. 
+  - express
+  - mongoose
+  - mongo
+  - news api
+
+  Potentially more?
+
+# Features:
+
+1. Choosing a news category
+2. Randomly pulling a news article from that category
