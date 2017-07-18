@@ -1,23 +1,30 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Random News You Never Knew!</title>
-    <link rel="stylesheet" href="/main.css">
-  </head>
-  <body>
-    <div class="c-header">
+  <body style="background:lightgray">
+    <div class="container container-table">
+      <div class="row vertical-center-row">
+        <div class="text-center col-md-4 col-md-offset-4" style="background:lightgray">
       <h1><a href="/">Random News You Never Knew!</a></h1>
-      <a href="/article/new" class="c-link">Get an article</a>
-    </div>
-    
-    {{{ body }}}
-
-    <footer>
-      <div class="c-content">
-        Copyright 2017
+      <a class="btn btn-primary btn-lg" href="/article/new" role="button" data-toggle="modal" data-target="#theModal">Get an article</a>
+      <div class="list-group">
+        {{#each category}}
+        <a href={{this.url}} class="btn btn-info" role="button">{{this.name}}</a>
+        {{/each}}
       </div>
-    </footer>
-    <script src="/main.js"></script>
+    </div>
+    </div>
+    </div>
+    <div id="theModal" class="modal fade text-center">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
   </body>
+
+  <footer class="site-footer">
+      <span class="glyphicon glyphicon-copyright-mark"></span> MT 2017
+  </footer>
 </html>
