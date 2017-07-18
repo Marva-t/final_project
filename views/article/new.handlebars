@@ -1,14 +1,17 @@
 
-<body style="background:lightblue">
 <div class="container-table">
-  <h3>Random Article</h3>
+  <div class="row vertical-center-row">
+    <div class="text-center col-md-4 col-md-offset-4" style="background:lightblue">
+  <h1>Random Article</h1>
+  <a class="btn btn-primary btn-sm" href="/" role="button">Back</a>
+  <a href={{article.url}} class="btn btn-info" role="button">{{article.title}}</a>
   <div class="article-author">
-    {{article.author}}
+    <h2>Author: {{article.author}}</h2>
   </div>
-    <!-- <a href={{article.url}} class="btn btn-info" role="button">{{article.title}}</a> -->
   <div class="article-description">
-    {{article.description}}
+    <h3>Description: {{article.description}}</h3>
   </div>
-    <!-- <img src="{{article.urlToImage}}" class="img-circle" alt="news"> -->
+    <img src="{{article.urlToImage}}" class="img-circle" alt="news">
 </div>
-</body>
+</div>
+</div>

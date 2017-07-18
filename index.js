@@ -73,10 +73,10 @@ app.get('/', function(req, res){
   request.get(`https://newsapi.org/v1/sources?category=technology`, (error, response, body) => {
     let categories = JSON.parse(body)
     // console.log(categories.sources)
-  res.render('./layouts/main', {
+  res.render('index', {
     category: categories.sources
+    })
   })
-})
 })
 
 app.get('/article/new', function( req, res ) {
@@ -84,14 +84,11 @@ app.get('/article/new', function( req, res ) {
   // console.log(source)
   request.get(`https://newsapi.org/v1/articles?source=techcrunch&apiKey=46a6e7ffefd54b99af8370b318aa627b`, ( error, response, body ) => {
     let data = JSON.parse(body)
-    // console.log(data.articles[2])
     var x = Math.floor(Math.random() * data.articles.length)
-    res.render('./article/new', {
+    res.render('article/new', {
       article: data.articles[x]
     })
-
   })
-
 })
 
 
